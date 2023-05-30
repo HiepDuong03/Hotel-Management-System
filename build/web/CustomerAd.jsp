@@ -38,7 +38,7 @@
 	<link href="Admin/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
 </head>
 	
-</head>
+
 <body>
 
     <!--*******************

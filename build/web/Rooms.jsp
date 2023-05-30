@@ -34,6 +34,15 @@
         <link rel="stylesheet" href="Asset/css/flaticon.css">
         <link rel="stylesheet" href="Asset/css/icomoon.css">
         <link rel="stylesheet" href="Asset/css/style.css">
+        <style>
+            #status{
+                padding: 0.5rem 0.875rem 0.5rem 0.875rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #fff;
+            }
+        </style>
     </head>
     <c:set var="page" value="${param.page}"/>
     <c:set var="pagesize" value="5"/>
@@ -69,22 +78,24 @@
                                 <div class="col-sm col-md-6 col-lg-4 ftco-animate">
                                     
                                     <div class="room">
-                                        <a href="rooms-single.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(${r.roomImg});">
+                                        <a href="DetailRoom.jsp" class="img d-flex justify-content-center align-items-center" style="background-image: url(${r.roomImg});">
                                             <div class="icon d-flex justify-content-center align-items-center">
                                                 <span class="icon-search2"></span>
                                             </div>
                                         </a>
                                         <div class="text p-3 text-center">
-                                            <h3 class="mb-3"><a href="rooms-single.html">${r.roomName}</a></h3>
+                                            <h3 class="mb-3"><a href="DetailRoom.jsp">${r.roomName}</a></h3>
                                             <p><span class="price mr-2">${r.roomPrice}</span> <span class="per">per night</span></p>
                                             <ul class="list">
                                                 <li><span>Max:</span> ${r.roomMax} Persons</li>
                                                 <li><span>Size:</span> ${r.roomSize} m2</li>
                                                 <li><span>View:</span> ${r.roomView} View</li>
                                                 <li><span>Bed:</span> ${r.roomBed}</li>
+                                                
+                                                <li><span class=" badge badge-success" id="status">AVAILABLE</span> </li>
                                             </ul>
                                             <hr>
-                                            <p class="pt-1"><a href="room-single.html" class="btn-custom">Book Now <span class="icon-long-arrow-right"></span></a></p>
+                                            <p class="pt-1"><a href="DetailRoom.jsp" class="btn-custom">Book Now <span class="icon-long-arrow-right"></span></a></p>
                                         </div>
                                     </div>
                                 </div>

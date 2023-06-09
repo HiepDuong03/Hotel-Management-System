@@ -630,6 +630,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
+
                                                     <div class="mb-3 row">
                                                         <label class="col-lg-4 col-form-label" for="validationCustom02">Room Bed <span
                                                                 class="text-danger">*</span>
@@ -649,26 +650,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="mb-3 row">
-                                                        <label class="col-lg-4 col-form-label" for="validationCustom02">Room Bed <span
-                                                                class="text-danger">*</span>
-                                                        </label>
-                                                        <div class="col-lg-6">
-                                                            <select class="default-select wide form-control" id="validationCustom02">
-                                                                <option  data-display="Select">Please select</option>
-                                                                <option value="1">1 </option>
-                                                                <option value="2">2 </option>
-                                                                <option value="3">3 </option>
-                                                                <option value="4">4 </option>
-                                                                <option value="5">5 </option>
-                                                                <option value="6">6 </option>
-                                                            </select>
-                                                            <div class="invalid-feedback">
-                                                                Please select a one.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    
+
                                                     <div class="mb-3 row">
                                                         <label class="col-lg-4 col-form-label" for="validationCustom03">Room size
                                                             <span class="text-danger">*</span>
@@ -697,7 +679,22 @@
                                                             <div class="invalid-feedback">
                                                                 Please select a one.
                                                             </div>
+                                                            
+                                                            
                                                         </div>                                                    </div>
+                                                    
+                                                    <div class="mb-3 row">
+                                                        <label class="col-lg-4 col-form-label" for="validationCustom03">File Images
+                                                            <span class="text-danger">*</span>
+                                                        </label>
+                                                        <div class="col-lg-6">
+                                                          <input class="form-control form-control-sm pl-lg-3" id="formFileSm" type="file" />
+                                                            <div class="invalid-feedback">
+                                                                Please enter a password.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
                                                 <div class="col-xl-6">
                                                     <div class="mb-3 row">
@@ -714,7 +711,7 @@
                                                                 <option value="5">5 </option>
 
                                                             </select>
-                                                            
+
                                                             <div class="invalid-feedback">
                                                                 Please select a one.
                                                             </div>
@@ -742,50 +739,39 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                     
+
                                                     <div class="mb-3 row">
                                                         <label class="col-lg-4 col-form-label" for="validationCustom08">Category Room
                                                             <span class="text-danger">*</span>
                                                         </label>
                                                         <div class="col-lg-6">
-                                                           <select class="default-select wide form-control" id="validationCustom08">
-                                                            <option  data-display="Select">Please select</option>
-                                                            <option value="1">Family Room</option>
-                                                            <option value="2">Deluxe Room</option>
-                                                            <option value="3">Classic Room</option>
-                                                            <option value="4">Superior Room</option>
-                                                            <option value="5">Luxury Room</option>
-                                                            <option value="6">Suite</option>
-                                                        </select>
+                                                            <select class="default-select wide form-control" id="validationCustom08">
+                                                                <option  data-display="Select">Please select</option>
+                                                                <option value="1">Family Room</option>
+                                                                <option value="2">Deluxe Room</option>
+                                                                <option value="3">Classic Room</option>
+                                                                <option value="4">Superior Room</option>
+                                                                <option value="5">Luxury Room</option>
+                                                                <option value="6">Suite</option>
+                                                            </select>
                                                         </div>
                                                     </div>
-                                                    <div class="mb-3 row">
-                                                        <label class="col-lg-4 col-form-label" for="validationCustom08">Room images
-                                                            <span class="text-danger">*</span>
-                                                        </label>
-                                                        <div class="col-lg-6">
-                                                            <input type="text" class="form-control" id="validationCustom08"  placeholder="http://image_1.com|http://image_2.com" required>
-                                                            <div class="invalid-feedback">
-                                                                Please enter a url.
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    
 
-                                                 
+
                                                 </div>
-                                               
-                                            </div>
-                                            <div>
-                                                <div class="w-100 d-flex">
-                                                    <button type="submit" class="btn btn-primary mx-auto">Submit</button>
+
+                                         
+                                                    <div class="w-100 d-flex pt-5">
+                                                        <button type="submit" class="btn btn-primary mx-auto">Submit</button>
+                                                    </div>
                                                 </div>
-                                            </div>
                                         </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
-              
+
                     </div>
                 </div>
             </div>
@@ -799,7 +785,7 @@
             ***********************************-->
             <div class="footer">
                 <div class="copyright">
-                  
+
                 </div>
             </div>
             <!--**********************************

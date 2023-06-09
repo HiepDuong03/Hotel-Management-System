@@ -142,7 +142,7 @@
                 <div class="card-header d-block border-0">
                     <div class="form-head d-flex align-items-center">
                         <div class="me-auto">
-                            <h2 class="p-title font-w500 mb-0">Purchase History</h2>
+                            <h2 class="p-title font-w500 mb-0">My Rooms</h2>
                         </div>
                         <div class="input-group search-area1">
                             <input type="text" class="form-control" placeholder="Search here">

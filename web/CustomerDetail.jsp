@@ -745,7 +745,7 @@
                                     <div class="d-flex align-items-center justify-content-between mb-4 ">
                                         <p class="m-0">#R-245T345</p>
                                         <div class="dropdown">
-                                            <a href="javascript:void(0);" class="btn btn-primary text-black btn-sm dropdown-toggle" id="dropdownButton">BOOKED</a>
+                                            <a href="javascript:void(0);" class="btn btn-primary text-black btn-sm dropdown-toggle" id="dropdownButton">AVAILABLE</a>
                                             <ul class="dropdown-menu" aria-labelledby="dropdownButton">
                                                 <li><a class="dropdown-item" onclick="changeButtonTextAndFilter('AVAILABLE', '#28A745')" href="#">AVAILABLE</a></li>
                                                 <li><a class="dropdown-item" onclick="changeButtonTextAndFilter('CANCEL', 'orange')" href="#">CANCEL</a></li>
@@ -1012,7 +1012,7 @@
                                         </div>
 
                                         <div  style="    margin-left: 1%;">
-                                            <button type="button" class="btn btn-danger text-black">Payment</button>
+                                            <button type="button" class="btn btn-danger text-black"><a href="PaymentHistory.jsp">Payment</a></button>
                                         </div>
 
 
@@ -1230,6 +1230,43 @@
                     this.style.backgroundColor = "";
                 });
             }
+        </script>
+        <script>
+             const decreaseButton = document.querySelector(".btn-quantity:nth-child(1)");
+    const increaseButton = document.querySelector(".btn-quantity:nth-child(3)");
+    const quantityInput = document.querySelector(".input-quantity");
+    const priceElement = document.querySelector("#price");
+
+  
+    let price = 0;
+    let quantity = 1;
+
+    // Hàm giảm số lượng
+    function decreaseQuantity() {
+        if (quantity > 1) {
+            quantity--;
+            updateQuantityAndPrice();
+        }
+    }
+
+   
+    function increaseQuantity() {
+        quantity++;
+        updateQuantityAndPrice();
+    }
+    function updateQuantityAndPrice() {
+        quantityInput.value = quantity;
+        price = calculatePrice(quantity);
+        priceElement.textContent = price + "$";
+    }
+
+    function calculatePrice(quantity) {
+        
+        return quantity * 10; 
+    }
+
+    
+    updateQuantityAndPrice();
         </script>
     </body>
 

@@ -9,13 +9,14 @@ public class User {
     private String cmnd;
     private String sdt;
     private String email;
+    private String image;
     private String bankName;
     private String bankNumber;
 
     public User() {
     }
-    
-    public User(int userId, String username, String password, int role, String name, String cmnd, String sdt, String email, String bankName, String bankNumber) {
+
+    public User(int userId, String username, String password, int role, String name, String cmnd, String sdt, String email, String image, String bankName, String bankNumber) {
         this.userId = userId;
         this.username = username;
         this.password = password;
@@ -24,6 +25,7 @@ public class User {
         this.cmnd = cmnd;
         this.sdt = sdt;
         this.email = email;
+        this.image = image;
         this.bankName = bankName;
         this.bankNumber = bankNumber;
     }
@@ -96,6 +98,14 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getBankName() {

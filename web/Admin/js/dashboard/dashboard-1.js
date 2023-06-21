@@ -139,8 +139,8 @@
 				breakpoint: 1601,
 				options:{
 					chart: {
-						height:80,
-					},
+						height:80
+					}
 					
 				}
 			}

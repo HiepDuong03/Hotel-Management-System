@@ -1,17 +1,8 @@
-
-
-
-<%-- 
-    Document   : Home
-    Created on : May 14, 2023, 12:47:11 PM
-    Author     : Admin
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
    <head>
-    <title>DELUXE HOTEL</title>
+    <title>Deluxe - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -64,7 +55,7 @@
 		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
-		                <strong class="number" data-number="50000">0</strong>
+		                <strong class="number" data-number="${guest}">0</strong>
 		                <span>Happy Guests</span>
 		              </div>
 		            </div>
@@ -72,7 +63,7 @@
 		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
-		                <strong class="number" data-number="3000">0</strong>
+		                <strong class="number" data-number="${room}">0</strong>
 		                <span>Rooms</span>
 		              </div>
 		            </div>
@@ -80,7 +71,7 @@
 		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
-		                <strong class="number" data-number="1000">0</strong>
+		                <strong class="number" data-number="40">0</strong>
 		                <span>Staffs</span>
 		              </div>
 		            </div>
@@ -88,8 +79,8 @@
 		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
-		                <strong class="number" data-number="100">0</strong>
-		                <span>Destination</span>
+		                <strong class="number" data-number="${view}">0</strong>
+		                <span>View</span>
 		              </div>
 		            </div>
 		          </div>

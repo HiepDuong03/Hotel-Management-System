@@ -4,13 +4,13 @@ public class Product {
     private int productId;
     private String productName;
     private String image;
-    private int purchasePrice;
-    private int salePrice;
+    private double purchasePrice;
+    private double salePrice;
 
     public Product() {
     }
 
-    public Product(int productId, String productName, String image, int purchasePrice, int salePrice) {
+    public Product(int productId, String productName, String image, double purchasePrice, double salePrice) {
         this.productId = productId;
         this.productName = productName;
         this.image = image;
@@ -42,22 +42,23 @@ public class Product {
         this.image = image;
     }
 
-    public int getPurchasePrice() {
+    public double getPurchasePrice() {
         return purchasePrice;
     }
 
-    public void setPurchasePrice(int purchasePrice) {
+    public void setPurchasePrice(double purchasePrice) {
         this.purchasePrice = purchasePrice;
     }
 
-    public int getSalePrice() {
+    public double getSalePrice() {
         return salePrice;
     }
 
-    public void setSalePrice(int salePrice) {
+    public void setSalePrice(double salePrice) {
         this.salePrice = salePrice;
     }
 
+    
     @Override
     public String toString() {
         return "Product{" + "productId=" + productId + ", productName=" + productName + ", image=" + image

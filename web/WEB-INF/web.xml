@@ -13,10 +13,6 @@
         <servlet-class>controller.ListRoomForAd</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>HomeControl</servlet-name>
-        <servlet-class>controller.HomeControl</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>AddNewRoom</servlet-name>
         <servlet-class>controller.AddNewRoom</servlet-class>
     </servlet>
@@ -35,10 +31,6 @@
     <servlet-mapping>
         <servlet-name>ListRoomForAd</servlet-name>
         <url-pattern>/roomAd</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>HomeControl</servlet-name>
-        <url-pattern>/home</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>AddNewRoom</servlet-name>

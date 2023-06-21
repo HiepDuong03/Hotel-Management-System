@@ -32,17 +32,17 @@ public class AdminHome extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
-           //tao doi tuong customer 
-           UserDao daoU = new UserDao();
-           //tao doi tuong rooms
-           RoomDao daoR = new RoomDao();
-           //lay tong so user tu data 
-       int totalCustomer =  daoU.getTotalUsers();
-       //tuong tu voi room
-       int totalRoom = daoR.getTotalRoom();
-       request.setAttribute("totalC", totalCustomer);
-       request.setAttribute("totalR", totalRoom);
-       request.getRequestDispatcher("AdminHome.jsp").forward(request, response);
+//           //tao doi tuong customer 
+//           UserDao daoU = new UserDao();
+//           //tao doi tuong rooms
+//           RoomDao daoR = new RoomDao();
+//           //lay tong so user tu data 
+//       int totalCustomer =  daoU.getTotalUsers();
+//       //tuong tu voi room
+//       int totalRoom = daoR.getTotalRoom();
+//       request.setAttribute("totalC", totalCustomer);
+//       request.setAttribute("totalR", totalRoom);
+//       request.getRequestDispatcher("AdminHome.jsp").forward(request, response);
         }
     }
 

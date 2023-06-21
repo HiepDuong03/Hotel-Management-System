@@ -4,20 +4,20 @@
  */
 package controller;
 
-
 import dal.RoomDao;
 import entity.Room;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
-
 /**
  *
- * @author Nguyễn Hoàng Anh
+ * @author ASUS
  */
+@WebServlet(name = "ListRoom", urlPatterns = {"/list"})
 public class ListRoom extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -66,5 +66,6 @@ public class ListRoom extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
 
 }

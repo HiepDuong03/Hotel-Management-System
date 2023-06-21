@@ -8,10 +8,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Nguyễn Hoàng Anh
- */
+
 public class UserDao extends DBContext {
 
     Connection conn = null;

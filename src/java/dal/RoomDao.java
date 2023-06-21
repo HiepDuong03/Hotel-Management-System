@@ -11,10 +11,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- *
- * @author Nguyễn Hoàng Anh
- */
+
 public class RoomDao extends DBContext {
 
     Connection conn = null;

@@ -166,4 +166,29 @@ public class UserDao extends DBContext {
             System.out.println(e);
         }
     }
+     public int getTotalUsers(){
+       
+         int total = 0;
+         String query = "SELECT COUNT(*) \n"
+                 + "FROM tbUser\n"
+                 + "where role = 2;";
+         try {
+
+             conn = new DBContext().getConnection();
+             ps = conn.prepareStatement(query);
+             rs = ps.executeQuery();
+             if (rs.next()) {
+                 total = rs.getInt(1);
+             }
+
+         } catch (Exception e) {
+             System.out.println(e);
+         }
+         return total;
+    }
+      public static void main(String[] args) {
+        UserDao a  = new UserDao();
+      
+          System.out.println(""+a.getTotalUsers());
+    }
 }

@@ -559,4 +559,22 @@ public class RoomDao extends DBContext {
             System.out.println(e);
         }
     }
+    public int getTotalRoom(){
+           int total = 0;
+        String query = "SELECT COUNT(*) \n" +
+"FROM tbRoom;";
+        try{
+          
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery(); 
+            if(rs.next()){
+                total = rs.getInt(1);
+            }
+            
+        }catch (Exception e) {
+            System.out.println(e);
+        }
+        return total;
+    }
 }

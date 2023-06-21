@@ -14,10 +14,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 
-/**
- *
- * @author ASUS
- */
+
 public class ListRoomForAd extends HttpServlet {
 
     /**

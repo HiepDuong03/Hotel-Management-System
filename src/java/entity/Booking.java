@@ -5,11 +5,14 @@ package entity;
  * @author Nguyễn Hoàng Anh
  */
 public class Booking {
+   private int bookid;
     private int userId;
     private String name;
     private String cmnd;
+    private String std;
     private String image;
     private String bookDate;
+    private String complateDate;
     private String inDate;
     private String outDate;
     private int roomId;
@@ -19,10 +22,12 @@ public class Booking {
     public Booking() {
     }
 
-    public Booking(int userId, String name, String cmnd, String image, String bookDate, String inDate, String outDate, int roomId, String roomName, int statusId) {
+    public Booking(int bookid, int userId, String name, String cmnd, String std, String image, String bookDate, String inDate, String outDate, int roomId, String roomName, int statusId) {
+        this.bookid = bookid;
         this.userId = userId;
         this.name = name;
         this.cmnd = cmnd;
+        this.std = std;
         this.image = image;
         this.bookDate = bookDate;
         this.inDate = inDate;
@@ -30,6 +35,14 @@ public class Booking {
         this.roomId = roomId;
         this.roomName = roomName;
         this.statusId = statusId;
+    }
+
+    public int getBookid() {
+        return bookid;
+    }
+
+    public void setBookid(int bookid) {
+        this.bookid = bookid;
     }
 
     public int getUserId() {
@@ -56,6 +69,14 @@ public class Booking {
         this.cmnd = cmnd;
     }
 
+    public String getStd() {
+        return std;
+    }
+
+    public void setStd(String std) {
+        this.std = std;
+    }
+
     public String getImage() {
         return image;
     }
@@ -70,6 +91,14 @@ public class Booking {
 
     public void setBookDate(String bookDate) {
         this.bookDate = bookDate;
+    }
+
+    public String getComplateDate() {
+        return complateDate;
+    }
+
+    public void setComplateDate(String complateDate) {
+        this.complateDate = complateDate;
     }
 
     public String getInDate() {
@@ -114,7 +143,9 @@ public class Booking {
 
     @Override
     public String toString() {
-        return "Booking{" + "userId=" + userId + ", name=" + name + ", cmnd=" + cmnd + ", image=" + image + ", bookDate=" + bookDate + ", inDate=" + inDate + ", outDate=" + outDate + ", roomId=" + roomId + ", roomName=" + roomName + ", statusId=" + statusId + '}';
+        return "Booking{" + "bookid=" + bookid + ", userId=" + userId + ", name=" + name + ", cmnd=" + cmnd + ", std=" + std + ", image=" + image + ", bookDate=" + bookDate + ", complateDate=" + complateDate + ", inDate=" + inDate + ", outDate=" + outDate + ", roomId=" + roomId + ", roomName=" + roomName + ", statusId=" + statusId + '}';
     }
+
+   
   
 }

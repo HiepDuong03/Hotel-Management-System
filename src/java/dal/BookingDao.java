@@ -10,10 +10,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- *
- * @author Nguyễn Hoàng Anh
- */
+
 public class BookingDao extends DBContext {
 
     Connection conn = null;
@@ -60,7 +57,7 @@ public class BookingDao extends DBContext {
         List<Booking> list = new ArrayList<>();
         try {
             String query = "\"\"\n" +
-"                           SELECT u.UserId, u.Name, u.Cmnd,u.Image, b.BookDate, bd.StartDate, bd.EndDate, r.RoomId, r.RoomName, s.StatusId\n" +
+"                           SELECT b.BookId, u.UserId, u.Name, u.Cmnd, u.SDT, u.Image, b.BookDate, bd.StartDate, bd.EndDate, r.RoomId, r.RoomName, s.StatusId\n" +
 "                           FROM tbUser u\n" +
 "                           INNER JOIN tbBook b ON u.UserId = b.UserId\n" +
 "                           INNER JOIN tbBookDetails bd ON b.BookId = bd.BookId\n" +
@@ -73,27 +70,28 @@ public class BookingDao extends DBContext {
             rs = ps.executeQuery();
             while (rs.next()) {
                 list.add(new Booking(rs.getInt(1),
-                        rs.getString(2),
+                        rs.getInt(2),
                         rs.getString(3),
                         rs.getString(4),
                         rs.getString(5),
                         rs.getString(6),
                         rs.getString(7),
-                        rs.getInt(8),
+                        rs.getString(8),
                         rs.getString(9),
-                        rs.getInt(10)));
+                        rs.getInt(10),
+                        rs.getString(11),
+                        rs.getInt(12)));
             }
         } catch (Exception e) {
             System.out.println(e);
         }
         return list;
     }
-    
-        public List<Booking> getAllPayment() {
+       public List<Booking> getAllPayment() {
         List<Booking> list = new ArrayList<>();
         try {
             String query = "\"\"\n" +
-"                           SELECT u.UserId, u.Name, u.Cmnd,u.Image, b.BookDate, bd.StartDate, bd.EndDate, r.RoomId, r.RoomName, s.StatusId\n" +
+"                           SELECT b.BookId, u.UserId, u.Name, u.Cmnd, u.SDT, u.Image, b.BookDate, bd.StartDate, bd.EndDate, r.RoomId, r.RoomName, s.StatusId\n" +
 "                           FROM tbUser u\n" +
 "                           INNER JOIN tbBook b ON u.UserId = b.UserId\n" +
 "                           INNER JOIN tbBookDetails bd ON b.BookId = bd.BookId\n" +
@@ -107,19 +105,105 @@ public class BookingDao extends DBContext {
             rs = ps.executeQuery();
             while (rs.next()) {
                 list.add(new Booking(rs.getInt(1),
-                        rs.getString(2),
+                        rs.getInt(2),
                         rs.getString(3),
                         rs.getString(4),
                         rs.getString(5),
                         rs.getString(6),
                         rs.getString(7),
-                        rs.getInt(8),
+                        rs.getString(8),
                         rs.getString(9),
-                        rs.getInt(10)));
+                        rs.getInt(10),
+                        rs.getString(11),
+                        rs.getInt(12)));
             }
         } catch (Exception e) {
             System.out.println(e);
         }
         return list;
+    }
+        public Booking getBookingbyIdRoom(String rid) {
+        try {
+            String query = "SELECT b.BookId, u.UserId, u.Name, u.Cmnd, u.SDT, u.Image, b.BookDate, bd.StartDate, bd.EndDate, r.RoomId, r.RoomName, s.StatusId\n" +
+"                            FROM tbUser u\n" +
+"                            INNER JOIN tbBook b ON u.UserId = b.UserId\n" +
+"                            INNER JOIN tbBookDetails bd ON b.BookId = bd.BookId and (getdate()>=StartDate and GETDATE()<=EndDate)\n" +
+"                            INNER JOIN tbStatus s ON b.StatusId = s.StatusId\n" +
+"                            INNER JOIN tbRoom r ON bd.RoomId = r.RoomId\n" +
+"                            Where r.RoomId = ?\n" +
+"                           \"\"";
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, rid);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new Booking(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getString(9),
+                        rs.getInt(10),
+                        rs.getString(11),
+                        rs.getInt(12));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return null;
+    }
+         public void updateStateBooking(String bookid, String status) {
+        try {
+            String query = "\"\"\n" +
+"                           UPDATE tbBook\n" +
+"                           SET StatusId = ?\n" +
+"                           WHERE BookId = ?\n" +
+"                           \"\"";
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, status);
+            ps.setString(2, bookid);
+            ps.executeUpdate();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public Booking getBookingById(String id) {
+        try {
+            String query = "\"\"\n" +
+"                           SELECT b.BookId, u.UserId, u.Name, u.Cmnd, u.SDT, u.Image, b.BookDate, bd.StartDate, bd.EndDate, r.RoomId, r.RoomName, s.StatusId\n" +
+"                           FROM tbUser u\n" +
+"                           INNER JOIN tbBook b ON u.UserId = b.UserId\n" +
+"                           INNER JOIN tbBookDetails bd ON b.BookId = bd.BookId\n" +
+"                           INNER JOIN tbStatus s ON b.StatusId = s.StatusId\n" +
+"                           INNER JOIN tbRoom r ON bd.RoomId = r.RoomId\n" +
+"                           Where b.BookId = ?\n" +
+"                           \"\"";
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, id);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new Booking(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8),
+                        rs.getString(9),
+                        rs.getInt(10),
+                        rs.getString(11),
+                        rs.getInt(12));
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return null;
     }
 }

@@ -12,28 +12,34 @@
             <file>file:/D:/Swp/HotelManagementSystem/web/Home.jsp</file>
             <file>file:/D:/Swp/HotelManagementSystem/web/DetailRoom.jsp</file>
             <file>file:/D:/Swp/HotelManagementSystem/web/Contact.jsp</file>
+            <file>file:/D:/Swp/HotelManagementSystem/src/java/dal/UserDao.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/EditBooking.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/ListCustomerControl.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/LogoutControl.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/BookRoomAd.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/SignInControl.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/web/WEB-INF/web.xml</file>
+            <file>file:/D:/Swp/HotelManagementSystem/src/java/context/DBContext.java</file>
+            <file>file:/D:/Swp/HotelManagementSystem/src/java/dal/BookingDao.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/web/Admin/js/dashboard/dashboard-1.js</file>
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/SignupControl.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/InforAbout.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/web/OrderHistory.jsp</file>
             <file>file:/D:/Swp/HotelManagementSystem/web/Asset/css/owl.carousel.min.css</file>
+            <file>file:/D:/Swp/HotelManagementSystem/src/java/entity/Booking.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/AdminHome.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/web/PaymentHistory.jsp</file>
             <file>file:/D:/Swp/HotelManagementSystem/web/RoomsAd.jsp</file>
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/MyRoomControl.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/web/Restaurant.jsp</file>
             <file>file:/D:/Swp/HotelManagementSystem/web/_MenuLayoutAd.jsp</file>
+            <file>file:/D:/Swp/HotelManagementSystem/src/java/dal/RoomDao.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/ListRoomForAd.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/web/Login.jsp</file>
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/DetailAdControl.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/PaymentControl.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/AddNewRoom.java</file>
+            <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/DetailControl.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/web/Blog.jsp</file>
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/ConfirmControl.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/ListBookingControl.java</file>
@@ -48,10 +54,14 @@
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/DeleteUser.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/EditRoomControl.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/web/CustomerDetail.jsp</file>
+            <file>file:/D:/Swp/HotelManagementSystem/web/AddNewAccount.jsp</file>
+            <file>file:/D:/Swp/HotelManagementSystem/src/java/dal/AboutDao.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/web/_HeaderLayoutAd.jsp</file>
             <file>file:/D:/Swp/HotelManagementSystem/web/ConfirmBooking.jsp</file>
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/DeleteRoomControl.java</file>
+            <file>file:/D:/Swp/HotelManagementSystem/src/java/dal/ProductDao.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/ListRoom.java</file>
+            <file>file:/D:/Swp/HotelManagementSystem/src/java/controller/EditCustomerControl.java</file>
             <file>file:/D:/Swp/HotelManagementSystem/web/META-INF/context.xml</file>
         </group>
     </open-files>

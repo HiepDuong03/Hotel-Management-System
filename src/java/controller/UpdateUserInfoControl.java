@@ -11,10 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-/**
- *
- * @author Nguyễn Hoàng Anh
- */
+
 @WebServlet(name = "UpdateUserInfoControl", urlPatterns = {"/updateuser"})
 public class UpdateUserInfoControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)

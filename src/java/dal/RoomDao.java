@@ -441,7 +441,24 @@ public class RoomDao extends DBContext {
         }
         return null;
     }
-
+  public int getTotalRoom(){
+           int total = 0;
+        String query = "SELECT COUNT(*) \n" +
+"FROM tbRoom;";
+        try{
+          
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery(); 
+            if(rs.next()){
+                total = rs.getInt(1);
+            }
+            
+        }catch (Exception e) {
+            System.out.println(e);
+        }
+        return total;
+    }
     public void addNewRoom(String name, String bed, String cate, String image, String video,
             String size, String view, String max, String star, String des, String price) {
         try {

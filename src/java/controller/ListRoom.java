@@ -14,10 +14,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-/**
- *
- * @author Nguyễn Hoàng Anh
- */
+
 public class ListRoom extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
